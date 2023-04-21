@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styles.css"
+          th:href="${'css/styles.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Výchozí webová stránka | Java 2</title>
+</head>
+<body>
+
+    <div class="header">
+
+        <h1>Camel Calculator</h1>
+
+    </div>
+
+    <div class="content">
+        <h2>How many camels for your personfriend?</h2>
+
+        <div class="result">
+            <h2>Your personfriend is worth</h2>
+            <span th:text="${result}" id="result">100</span>
+            <h2>camels.</h2>
+        </div>
+
+
+        <a id="submit" class="submit" th:href="@{/}" href="index.html">
+            <button>CALCULATE AGAIN</button>
+        </a>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styles.css"
+          th:href="${'css/styles.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Výchozí webová stránka | Java 2</title>
+</head>
+<body>
+    <div class="header">
+
+        <h1>Camel Calculator</h1>
+
+    </div>
+
+    <div class="content">
+
+        <h2>How many camels for your boyfriend?</h2>
+
+        <form method="post">
+            <table>
+                <tr>
+                    <td>
+                        <label for="age"><h3>Age</h3></label>
+                    </td>
+                    <td>
+                        <select name="age" id="age">
+
+                            <th:block th:each="age : ${ageList}">
+                                <option th:value="${age}" value="16">
+                                    <span th:text="${age}">16</span>
+                                </option>
+                            </th:block>
+
+                            <option th:remove="all" value="17">17</option>
+                            <option th:remove="all" value="18">18</option>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="height"><h3>Height</h3></label>
+                    </td>
+                    <td>
+                        <select name="height" id="height">
+
+                            <th:block th:each="height : ${heightList}">
+                                <option th:value="${height}" value="16">
+                                    <span th:text="${height}">16</span>
+                                </option>
+                            </th:block>
+
+                            <option th:remove="all" value="17">17</option>
+                            <option th:remove="all" value="18">18</option>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="haircolor"><h3>Haircolor</h3></label>
+                    </td>
+                    <td>
+                        <select name="haircolor" id="haircolor">
+
+                            <th:block th:each="haircolor : ${haircolorList}">
+                                <option th:value="${haircolor}" value="16">
+                                    <span th:text="${haircolor}">16</span>
+                                </option>
+                            </th:block>
+
+                            <option th:remove="all" value="17">17</option>
+                            <option th:remove="all" value="18">18</option>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="eyecolor"><h3>Eyecolor</h3></label>
+                    </td>
+                    <td>
+                        <select name="eyecolor" id="eyecolor">
+
+                            <th:block th:each="eyecolor : ${eyecolorList}">
+                                <option th:value="${eyecolor}" value="16">
+                                    <span th:text="${eyecolor}">16</span>
+                                </option>
+                            </th:block>
+
+                            <option th:remove="all" value="17">17</option>
+                            <option th:remove="all" value="18">18</option>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="figure"><h3>Figure</h3></label>
+                    </td>
+                    <td>
+                        <select name="figure" id="figure">
+
+                            <th:block th:each="figure : ${figureList}">
+                                <option th:value="${figure}" value="16">
+                                    <span th:text="${figure}">16</span>
+                                </option>
+                            </th:block>
+
+                            <option th:remove="all" value="17">17</option>
+                            <option th:remove="all" value="18">18</option>
+
+                        </select>
+                    </td>
+                </tr>
+
+            </table>
+
+            <a href="result.html">
+                <input src="../templates/result.html" type="submit" value="CALCULATE">
+            </a>
+        </form>
+    </div>
+
+</body>
+</html>
